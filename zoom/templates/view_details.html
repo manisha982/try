@@ -1,0 +1,34 @@
+{% extends "zoom/main.html" %}
+{% block title%}details{%endblock title %}
+
+
+{%block title%}view{%endblock title%}
+
+{% block body%}
+
+<div class="card">
+    <div class="card-header">
+        <h2>{{task.pk}}.{{tasks.title}}</h2>
+    </div>
+    <divclass="card-body">
+        <p><storng>Title:</strong>{{task.title}}</p>
+        <p><storng>description:</strong>{{task.title}}</p>
+        <p><storng>status:</strong>{{task.title}}</p>
+
+
+            {%if task.image%}
+
+
+            
+            <img src="{{task.image.url}}"class="rounded"alt="{{task.title}}"style="width:200px">{%endif%}
+        </div>
+        <divclass="card-footer">
+        <a herf="{% url"table"%}"class='btn-primary'>go back</a>
+    </div>
+
+</div>
+
+
+
+
+    

@@ -1,0 +1,17 @@
+{% extends "zoom/main.html" %}
+
+{% block title %}{% endblock title %}
+
+{% block body %}
+{% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fada show">
+        <strong>Message: </strong> {{message}}
+    </div>
+{% endfor %}
+
+    <form action="{% url "register" %}" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type='submit'>Submit</button>
+    </form>
+{% endblock body %}
